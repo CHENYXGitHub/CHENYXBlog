@@ -2,7 +2,7 @@ title: CHENYXBlog
 description: 写一些杂七杂八的记录博客
 #网站的根地址
 baseurl: "https://chenyxgithub.github.io/CHENYXBlog"
-url: ""
+url: "/CHENYXBlog"
 
 author:
   name: CHENYX
