@@ -1,7 +1,15 @@
+{% comment %}<head>标签用于定义文档的头部，它是所有头部元素的容器.<head>中的元素可以引用脚本、指示浏览器在哪里找到样式表、提供元信息等等。
+文档的头部描述了文档的各种属性和信息,包括文档的标题、在Web中的位置以及和其他文档的关系等。绝大多数文档头部包含的数据都不会真正作为内容显示
+给读者。下面这些标签可用在head部分:<base>,<link>,<meta>,<script>,<style>,以及<title>{% endcomment %}
 <head>
+  {% comment %}<meta>元素可提供有关页面的元信息，比如针对搜索引擎和更新频度的描述和关键词。<meta>标签位于文档的头部，不包含任何内容。<meta>
+  标签的属性定义了与文档相关联的名称/值对{% endcomment %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width initial-scale=1" />
+  {% comment %}把content属性关联到HTTP头部{% endcomment%}
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  {% comment %}site来自_config.yml文件，全站范围的信息+配置。page页面专属的信息+YAML头文件信息。通过YAML头文件自定义的信息都可以在这里被获取。
+  这里的page.robots配置在index.html中{% endcomment %}
   {% if page.robots %}
   <meta name="robots" content="{{ page.robots }}">
   {% endif %}
@@ -28,6 +36,7 @@
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:image" content="{{ site.baseurl }}/images/favicons/favicon-194x194.png" />
 
+  {% comment %}<link>标签定义文档与外部资源的关系.<link>标签最常见的用途是链接样式表{% endcomment %}
   <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/images/favicons/apple-touch-icon-72x72.png">

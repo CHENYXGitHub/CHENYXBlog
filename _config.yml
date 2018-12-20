@@ -5,6 +5,9 @@ baseurl: "https://chenyxgithub.github.io/CHENYXBlog"
 #baseurl: ""
 url: "/CHENYXBlog"
 
+#利用GoogleAnalytice监控Jekyll站点
+google_analytice: UA-131239320-1
+
 author:
   name: CHENYX
   github_username: CHENYXGitHub

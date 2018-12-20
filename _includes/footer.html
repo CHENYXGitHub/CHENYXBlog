@@ -1,9 +1,13 @@
+{% comment %}<footer>标签定义文档或文档的一部分区域的页脚{% endcomment %}
 <footer class="footer">
   <span class="footer__copyright">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. All rights reserved.</span>
 </footer>
 
+{% comment %}<script>标签用于定义客户端脚本，比如JavaScript.scrpt元素既可以包含脚本语句，也可以通过src属性指向外部脚本文件。
+必须的type属性规定脚本的MIME类型{% endcomment %}
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="{{ site.baseurl }}/js/main.js?{{site.time | date: '%s%N'}}"></script>
+{% comment %}用于配置Google Analytics{% endcomment %}
 {% if site.google_analytics and jekyll.environment != "development" %}
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

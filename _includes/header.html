@@ -1,14 +1,19 @@
 <span class="mobile btn-mobile-menu">
+  {%comment%}<i>标签显示斜体文本效果。<i>标签和基于内容的样式标签<em>类似。它告诉浏览器将包含其中的文本以斜体或者倾斜字体显示。
+  如果这种斜体字对该浏览器不可用的话，可以使用高亮、反白或加下划线等样式{% endcomment%}
   <i class="icon icon-list btn-mobile-menu__icon"></i>
   <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
 </span>
 
+{% comment %}<header>标签定义文档的页眉{% endcomment %}
 <header class="panel-cover" style="background-image: url({{ site.baseurl }}/images/cover.jpg)">
   <div class="panel-main">
 
     <div class="panel-main__inner panel-inverted">
     <div class="panel-main__content">
         <a href="{{ site.baseurl }}/" title="link to home of {{ site.title }}">
+          {% comment %}img元素向网页中嵌入一幅图像。请注意，从技术上讲<img>标签并不会在网页中插入图像，而是从网页中链接图像。<img>标签创建的是被引用图像
+          的占位空间。<img>标签有两个必须属性：src属性好alt属性{% endcomment %}
           <img src="{{ site.baseurl }}/images/profile.jpg" class="user-image" alt="My Profile Photo">
           <h1 class="panel-cover__title panel-title">{{ site.title }}</h1>
         </a>
@@ -17,7 +22,7 @@
         <hr class="panel-cover__divider panel-cover__divider--secondary">
 
         <div class="navigation-wrapper">
-
+          {% comment %}<nav>标签定义导航链接的部分，如果文档中有“前后”按钮，则应该把它放到<nav>元素中{% endcomment %}
           <nav class="cover-navigation cover-navigation--primary">
             <ul class="navigation">
               <li class="navigation__item"><a href="{{ site.baseurl }}/#blog" title="link to {{ site.title }} blog" class="blog-button">Blog</a></li>
