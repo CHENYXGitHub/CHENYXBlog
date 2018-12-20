@@ -24,7 +24,7 @@ defaults:
 
 #jekyll写入文件的路径
 destination: _site
-#每页该展示多少项目
+#指明分页每页该展示多少项目
 paginate: 10
 #如果你需要让发布的博客的URL地址不同于默认值/year/month/day/title.html那么
 #可以设置这个变量，然后变量值就会作为最终的URL地址
@@ -38,8 +38,8 @@ sass:
   style: compressed
 
 kramdown:
-  input: GFM             #使用Github Flavored Markdown
-  hard_wrap: false       #不使用<br>替换新行
-plugins: ['jekyll-paginate']
+  input: GFM                    #使用Github Flavored Markdown
+  hard_wrap: false              #不使用<br>替换新行
+plugins: ['jekyll-paginate']    #安装jekyll-paginate插件，使用分页功能
 #转换时排除某些文件、文件夹
 exclude: ['Gemfile','Gemfile.lock']
