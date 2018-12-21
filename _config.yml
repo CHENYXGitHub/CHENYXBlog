@@ -7,6 +7,8 @@ url: "/CHENYXBlog"
 
 #利用GoogleAnalytice监控Jekyll站点
 google_analytice: UA-131239320-1
+#评论功能：需要解决被墙问题
+#disqus_shortname
 
 author:
   name: CHENYX

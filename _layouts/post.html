@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% comment %}<article>标签定义外部的内容。外部内容可以是来自一个外部的新闻提供者的一篇新的文章，或者来自blog的文本，或者是来自论坛的文本。亦或是来自其他外部源的内容{% endcomment %}
 <article class="post-container post-container--single">
   <header class="post-header">
     <div class="post-meta">
@@ -12,6 +13,7 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
   </header>
 
+  {% comment %}<section>标签定义文档中的节(section、区段).比如章节、页眉、页脚或文档中的其他部分{% endcomment %}
   <section class="post">
     {{ content }}
   </section>

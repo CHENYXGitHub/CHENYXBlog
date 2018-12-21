@@ -5,7 +5,6 @@
 @import "monokai";
 
 /* Modifications */
-
 pre.highlight,
 .highlight pre {
   padding: 10px;
@@ -26,7 +25,8 @@ pre.highlight code,
   display: inline-block;
   padding: 10px;
 }
-
+/*.表示类选择器就是class中定义的那个值。*/
+/*border:边框，margin:外边距，padding:内边距，height：高度，width：宽度*/
 .categories a,
 .tags a {
   border: 1px solid #e25440;

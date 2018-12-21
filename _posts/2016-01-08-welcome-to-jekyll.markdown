@@ -1,8 +1,15 @@
 ---
+#是否允许显示此博客
 permission: true
+#是否允许评论
+comments: true
+#文章名称
 title:  "Welcome to Jekyll!"
+#时间
 date:   2016-01-08 15:04:23
+#分类
 categories: [jekyll]
+#标签链接
 tags: [jekyll]
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve --watch`, which launches a web server and auto-regenerates your site when a file is updated.
