@@ -1,28 +1,92 @@
-.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}.animated.hinge{-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}@-webkit-keyframes flash {
-	0%, 50%, 100% {opacity: 1;}	25%, 75% {opacity: 0;}
+/*@keyframes规则用于创建动画。在@keyframes中规定某项CSS样式，就能创建由当前样式逐渐改为新样式的动画效果*/
+/*animation-fill-mode：
+none：不改变默认行为。
+forwards：当动画完成后，保持最后一个属性值（在最后一个关键帧中定义)。
+backwards：在animation-delay所指定的一段时间内，在动画显示之前，应用开始属性值（在第一个关键帧中定义)。
+both：向前和向后填充模式都被应用*/
+/*animation-duration属性定义动画完成一个周期所需要的时间，以秒或毫秒记
+语法：animation-duration：time。其中time表示完成规定动画所花费的时间。默认值是0，意味着没有动画效果*/
+.animated{
+	-webkit-animation-fill-mode:both;
+	-moz-animation-fill-mode:both;
+	-ms-animation-fill-mode:both;
+	-o-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	-ms-animation-duration:1s;
+	-o-animation-duration:1s;
+	animation-duration:1s;
+	}
+.animated.hinge{
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	-ms-animation-duration:1s;
+	-o-animation-duration:1s;
+	animation-duration:1s;
 }
-
+/*opacity属性设置元素的不透明级别：
+value：规定不透明度。从0.0（完全透明）到1.0（完全不透明）
+inherit：应该从父元素继承opacity属性的值*/
+@-webkit-keyframes flash {
+	0%, 50%, 100% {opacity: 1;}	
+	25%, 75% {opacity: 0;}
+}
+/*moz ：Firefox*/
 @-moz-keyframes flash {
 	0%, 50%, 100% {opacity: 1;}	
 	25%, 75% {opacity: 0;}
 }
-
+/*Opera*/
 @-o-keyframes flash {
 	0%, 50%, 100% {opacity: 1;}	
 	25%, 75% {opacity: 0;}
 }
-
+/*动画是使元素从一种样式逐渐变化为另一种样式的效果
+你可以改变任意多的样式，任意多的次数。
+用百分比来规定变化的时间，或用关键词"from"和"to"，
+等同于0%和100%。0%是动画的开始，100%是动画的完成。为了得到最佳的浏览器支持，你应该始终定义0%和100%选择器*/
 @keyframes flash {
 	0%, 50%, 100% {opacity: 1;}	
 	25%, 75% {opacity: 0;}
 }
-
+/*当你在@keyframes中创建动画时，请把它捆绑到某个选择器，否则不会产生动画效果。
+通过规定至少以下两项CSS3动画属性，即可将动画绑定到选择器
+·规定动画的名称
+·规定动画的时长*/
+/*animation-name：属性为@keyframes动画规定名称
+语法：animation-name：keyframename|none。
+其中keyframename规定需要绑定到选择器的keyframe的名称。none规定无动画效果（可用来覆盖来自级联的动画)*/
 .flash {
 	-webkit-animation-name: flash;
 	-moz-animation-name: flash;
 	-o-animation-name: flash;
 	animation-name: flash;
 }
+/*webkit：Safari和Chrome*/
+/*transform：向元素应用2D或3D转换。该属性允许我们对元素进行旋转、缩放、移动或倾斜
+none：定义不进行转换
+matrix(n,n,n,n,n,n)：定义2D转换，使用六个值的矩阵
+matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)：定义3D转换，使用16个值的4x4矩阵
+translate(x,y)：定义2D转换
+translate3d(x,y,z)：定义3D转换
+translateX(x)：定义转换，只是用X轴的值
+translateY(y)：定义转换，只是用y轴的值
+translateZ(z)：定义3D转换，只是用z轴的值
+scale(x,y)：定义2D缩放转换
+scale3d(x,y,z)：定义3D缩放转换
+scaleX(x)：通过设置X轴的值来定义缩放转换
+scaleY(y)：通过设置Y轴的值来定义缩放转换
+scaleZ(z)：通过设置Z轴的值来定义3D缩放转换
+rotate(angle)：定义2D旋转，在参数中规定角度
+rotate3d(x,y,z,angle)：定义3D旋转
+rotateX(angle)：定义沿着X轴的3D旋转
+rotateY(angle)：定义沿着Y轴的3D旋转
+rotateZ(angle)：定义沿着Z轴的3D旋转
+skew(x-angle,y-angle)：定义沿着x和y轴的2D倾斜转换
+skewX(angle)：定义沿着X轴的2D倾斜转换
+skewY(angle)：定义沿着y轴的2D倾斜转换
+perspective(n)：为3D转换元素定义透视视图*/
 @-webkit-keyframes shake {
 	0%, 100% {-webkit-transform: translateX(0);}
 	10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-10px);}
@@ -120,6 +184,11 @@
 	-o-animation-name: tada;
 	animation-name: tada;
 }
+/*transform-origin：属性允许你改变被转换元素的位置。2D转换元素能够改变元素x和y轴。3D转换元素还能改变其z轴
+语法：transform-origin：x-axis y-axis z-axis
+x-axis：定义视图被置于x轴的何处。可能的值：left,center,right,length,%
+y-axis：定义视图被置于y轴的何处。可能的值：top,center,bottom,lenth,%
+z-axis：定义视图被置于z轴的何处。可能的值：length*/
 @-webkit-keyframes swing {
 	20%, 40%, 60%, 80%, 100% { -webkit-transform-origin: top center; }
 	20% { -webkit-transform: rotate(15deg); }	
@@ -240,6 +309,13 @@
 	-o-animation-name: pulse;
 	animation-name: pulse;
 }
+/*animation-timing-function：规定动画的速度曲线。速度曲线定义动画从一套CSS样式变为另一套所用的时间
+linear：动画从头到尾的速度是相同的
+ease：默认。动画以低速开始，然后加快，在结束前变慢
+ease-in：动画以低速开始
+ease-in：动画以低速结束
+ease-in-out：动画以低速开始和结束
+cubic-bezier(n,n,n,n)：在cubic-bezier函数中自己的值。可能的值是从0到1的数值*/
 @-webkit-keyframes flip {
 	0% {
 		-webkit-transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
@@ -328,7 +404,8 @@
 		animation-timing-function: ease-in;
 	}
 }
-
+/*backface-visibility属性定义当元素不面对屏幕时是否可见
+visible：背面是可见的。hidden：背面是不可见的*/
 .animated.flip {
 	-webkit-backface-visibility: visible !important;
 	-webkit-animation-name: flip;
