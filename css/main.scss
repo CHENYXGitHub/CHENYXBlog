@@ -9,7 +9,14 @@ pre.highlight,
 .highlight pre {
   padding: 10px;
 }
-
+/*white-space属性设置如何处理元素内的空白。这个属性声明建立布局过程中如何处理
+元素中的空白符。值pre-wrap和pre-line是CSS2.1中新增的。可能的值：
+normal：默认。空白会被浏览器忽略。
+pre：空白会被浏览器保留。其行为方式类似HTML中的<pre>标签
+nowrap：文本不会换行，文本会在同一行上继续，直到遇到<br>标签为止
+pre-wrap：保留空白符序列，但是正常的进行换行
+pre-line：合并空白符序列，但是保留换行符
+inherit：规定应该从父元素继承white-space属性的值*/
 pre.highlight code,
 .highlight pre code {
   white-space: pre-wrap;
@@ -20,13 +27,41 @@ pre.highlight code,
   margin: 5px 0;
   white-space: nowrap;
 }
-
+/*dispaly属性规定元素应该生成的框的类型。可能的值：
+none：此元素不会被显示
+block：此元素将显示为块级元素，此元素前后会带有换行符
+inline：默认。此元素会被显示为内联元素，元素前后没有换行符
+inline-block：行内块元素。(CSS2.1新增的值)
+list-item：此元素会作为列表显示。
+run-in：此元素会根据上下文作为块级元素或内联元素显示
+compact：CSS中有值compact，不过由于缺乏广泛支持，已经从CSS2.1中删除
+marker：CSS中有值marker,不过由于缺乏广泛支持，已经从CSS2.1中删除
+table：此元素会作为块级表格来显示(类似<table>),表格前后带有换行符
+inline-table：此元素会作为内联表格来显示(类似<table>,表格前后没有换行符
+table-row-group：此元素会作为一个或多个行的分组来显示（类似<tbody>)
+table-header-group：此元素会作为一个或多个行的分组来显示（类似<thead>)
+table-footer-group：此元素会最为一个或多个行的分组来显示（类似<tfoot>)
+table-row：此元素会作为一个表格行显示（类似<tr>)
+table-column-group：此元素会作为一个或多个列的分组来显示（类似<colgroup>)
+table-column：此元素会作为一个单元格列显示（类似<col>)
+table-cell：此元素会作为一个表格单元格显示（类似<td>和<th>)
+table-caption：此元素会作为一个表格标题显示（类似<caption>)
+inherit：规定应该从父元素继承display属性的值*/
 .pagination__page-number {
   display: inline-block;
   padding: 10px;
 }
 /*.表示类选择器就是class中定义的那个值。*/
 /*border:边框，margin:外边距，padding:内边距，height：高度，width：宽度*/
+/*border-radius属性是一个简写属性，用于设置四个border-radius属性
+border-radius:20px等价于：
+border-top-left-radius:10px
+border-top-right-radius:10px
+border-bottom-right-radius:10px
+border-bottom-left-radius:10px*/
+/*color：规定文本的颜色*/
+/*font-size：设置字体的尺寸*/
+/*text-shadow：向文本设置阴影*/
 .categories a,
 .tags a {
   border: 1px solid #e25440;
@@ -48,7 +83,12 @@ pre.highlight code,
 .footer__copyright {
     margin: 0 20px 10px;
 }
-
+/*position：规定元素的定位类型。可能的值：
+absolute：生成绝对定位的元素，相对于static定位以外的第一个父元素进行定位。元素的位置通过"left","top","right",以及"bottom"属性进行规定
+fixed：生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过"left","top","right",以及"bottom"属性进行规定
+relative：生成相对定位的元素，相对于其正常位置进行定位。因此,"left:20"会向元素的LEFT位置添加20像素
+static：默认值。没有定位，元素出现在正常的流中（忽略top,bottom,left,right或者z-index声明
+inherit：规定应该从父元素继承postion属性的值*/
 .user-image {
   margin-bottom: 1.2em;
   position: relative;
